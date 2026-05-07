@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorites - LuxeStay</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav transparent">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+            <path
+              d="M16 4L28 12V28H20V20H12V28H4V12L16 4Z"
+              stroke-width="1.8"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="nav-logo-text">LuxeStay</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="hotels.html" class="nav-link">Hotels</a></li>
+          <li><a href="attractions.html" class="nav-link">Attractions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="favorites.html" class="nav-link">Favorites</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="booking.html" class="nav-link nav-cta">Book Now</a></li>
+        </ul>
+        <button
+          class="nav-burger"
+          id="navBurger"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="page-hero">
+      <div
+        class="hero-bg"
+        data-bg="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1400&q=80"
+      ></div>
+      <div class="hero-overlay"></div>
+      <div class="page-hero-content container">
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a><span>›</span
+          ><span class="current">Favorites</span>
+        </nav>
+        <h1>Your <em>Favorites</em></h1>
+        <p class="page-hero-sub">Hotels you've saved, all in one place.</p>
+      </div>
+    </div>
+
+    <section class="section container">
+      <div class="section-header section-header-center reveal">
+        <span class="section-tag">Saved Properties</span>
+        <h2 class="section-title"><span id="favCount">0</span> Hotels Saved</h2>
+        <p class="section-sub">
+          Tap the heart on any property to add it here. Your list is stored on
+          this device.
+        </p>
+      </div>
+
+      <div id="favoritesGrid" class="grid-3"></div>
+
+      <div id="favoritesEmpty" class="favorites-empty" hidden>
+        <div class="favorites-empty-icon">♡</div>
+        <h3>No favorites yet</h3>
+        <p>
+          Start exploring and tap the heart on properties you love — they'll
+          appear here for easy access later.
+        </p>
+        <a href="hotels.html" class="btn btn-primary">Browse Hotels</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo-text">LuxeStay</div>
+            <p>
+              Curating the world's finest hospitality experiences since 2018.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="hotels.html">All Hotels</a></li>
+              <li><a href="hotels.html">Luxury Resorts</a></li>
+              <li><a href="hotels.html">Boutique Hotels</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help Centre</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 LuxeStay. All rights reserved.</span
+          ><span>Made with ♥ for exceptional travellers</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./scripts/hotels-data.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/favorites.js"></script>
+  </body>
+</html>

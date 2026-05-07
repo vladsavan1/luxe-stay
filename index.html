@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuxeStay - Discover Exceptional Hotels</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav transparent">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+            <path
+              d="M16 4L28 12V28H20V20H12V28H4V12L16 4Z"
+              stroke-width="1.8"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="nav-logo-text">LuxeStay</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="hotels.html" class="nav-link">Hotels</a></li>
+          <li><a href="attractions.html" class="nav-link">Attractions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="favorites.html" class="nav-link">Favorites</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="booking.html" class="nav-link nav-cta">Book Now</a></li>
+        </ul>
+        <button
+          class="nav-burger"
+          id="navBurger"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div
+        class="hero-bg"
+        data-bg="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600&q=85"
+      ></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <div class="hero-eyebrow">Curated Luxury Collection</div>
+        <h1>Where Every Stay<br />Becomes a <em>Story</em></h1>
+        <p class="sub">
+          Discover handpicked boutique hotels, resorts, and retreats that
+          redefine the art of hospitality.
+        </p>
+        <div class="hero-btns">
+          <a href="hotels.html" class="btn btn-primary btn-lg">Browse Hotels</a>
+          <a href="about.html" class="btn btn-outline btn-lg">Our Story</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="search-bar-offset container">
+      <div class="search-bar reveal">
+        <div class="search-field">
+          <label for="heroDestination">Destination</label>
+          <input
+            id="heroDestination"
+            type="text"
+            placeholder="Where are you going?"
+          />
+        </div>
+        <div class="search-field">
+          <label>Check In</label>
+          <input type="date" />
+        </div>
+        <div class="search-field">
+          <label>Check Out</label>
+          <input type="date" />
+        </div>
+        <div class="search-field">
+          <label>Guests</label>
+          <select>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4+ Guests</option>
+          </select>
+        </div>
+        <div class="search-btn-wrap">
+          <button id="heroSearchBtn" class="search-submit">
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.35-4.35" />
+            </svg>
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="section container">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-tag">Handpicked for You</div>
+          <h2 class="section-title">Featured Properties</h2>
+          <p class="section-sub">
+            Each property is personally vetted for exceptional design, service,
+            and location.
+          </p>
+        </div>
+        <a href="hotels.html" class="btn btn-dark">View All Hotels</a>
+      </div>
+      <div id="featuredGrid" class="grid-3"></div>
+    </section>
+
+    <section class="stats-bg-section">
+      <div class="container">
+        <div class="stats-split">
+          <div class="reveal">
+            <div class="section-tag">Why LuxeStay</div>
+            <h2 class="section-title">
+              Trusted by Thousands of Discerning Travellers
+            </h2>
+            <p class="section-sub">
+              We've built relationships with the finest hotels in 48 countries,
+              bringing you exclusive rates and insider access.
+            </p>
+            <div class="stats-row">
+              <div class="stat-item">
+                <div class="stat-num">2<em>K+</em></div>
+                <div class="stat-label">Properties</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">48<em>+</em></div>
+                <div class="stat-label">Countries</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">98<em>%</em></div>
+                <div class="stat-label">Satisfaction</div>
+              </div>
+            </div>
+          </div>
+          <div class="stats-img-grid reveal reveal-delay-1">
+            <img
+              src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=400&q=80"
+              alt="Hotel"
+              class="stats-img"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=400&q=80"
+              alt="Hotel"
+              class="stats-img stats-img-offset"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-tag">Browse by Type</div>
+          <h2 class="section-title">Find Your Perfect Stay</h2>
+        </div>
+      </div>
+      <div class="grid-4 reveal">
+        <a href="hotels.html" class="cat-card">
+          <img
+            src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=500&q=80"
+            alt="5-Star Resorts"
+          />
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-label">
+            <div class="cat-card-sub">Luxury</div>
+            <div class="cat-card-name">5-Star Resorts</div>
+          </div>
+        </a>
+        <a href="hotels.html" class="cat-card">
+          <img
+            src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&q=80"
+            alt="Design Hotels"
+          />
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-label">
+            <div class="cat-card-sub">Boutique</div>
+            <div class="cat-card-name">Design Hotels</div>
+          </div>
+        </a>
+        <a href="hotels.html" class="cat-card">
+          <img
+            src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=500&q=80"
+            alt="Spa Retreats"
+          />
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-label">
+            <div class="cat-card-sub">Wellness</div>
+            <div class="cat-card-name">Spa Retreats</div>
+          </div>
+        </a>
+        <a href="hotels.html" class="cat-card">
+          <img
+            src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&q=80"
+            alt="Eco Lodges"
+          />
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-label">
+            <div class="cat-card-sub">Nature</div>
+            <div class="cat-card-name">Eco Lodges</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="reviews-bg-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <div class="section-tag">Guest Stories</div>
+            <h2 class="section-title">What Our Guests Say</h2>
+          </div>
+        </div>
+        <div id="reviewsGrid" class="grid-3"></div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div
+        class="cta-banner-bg"
+        data-bg="https://images.unsplash.com/photo-1455587734955-081b22074882?w=1400&q=70"
+      ></div>
+      <div class="cta-banner-content container">
+        <div class="section-tag section-tag-center">Limited Availability</div>
+        <h2 class="section-title cta-title">
+          Ready for Your Next<br /><em class="gold-em">Extraordinary</em>
+          Journey?
+        </h2>
+        <p class="cta-sub">
+          Join over 50,000 travellers who trust LuxeStay for their most
+          memorable stays.
+        </p>
+        <a href="hotels.html" class="btn btn-primary btn-lg"
+          >Explore All Hotels</a
+        >
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo-text">LuxeStay</div>
+            <p>
+              Curating the world's finest hospitality experiences since 2018.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="hotels.html">All Hotels</a></li>
+              <li><a href="hotels.html">Luxury Resorts</a></li>
+              <li><a href="hotels.html">Boutique Hotels</a></li>
+              <li><a href="hotels.html">Spa Retreats</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help Centre</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 LuxeStay. All rights reserved.</span>
+          <span>Made with ♥ for exceptional travellers</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./scripts/hotels-data.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

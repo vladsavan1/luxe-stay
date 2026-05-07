@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attractions & Experiences - LuxeStay</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav transparent">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+            <path
+              d="M16 4L28 12V28H20V20H12V28H4V12L16 4Z"
+              stroke-width="1.8"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          <span class="nav-logo-text">LuxeStay</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="hotels.html" class="nav-link">Hotels</a></li>
+          <li>
+            <a href="attractions.html" class="nav-link active">Attractions</a>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="favorites.html" class="nav-link">Favorites</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="booking.html" class="nav-link nav-cta">Book Now</a></li>
+        </ul>
+        <button
+          class="nav-burger"
+          id="navBurger"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="page-hero" data-screen-label="Attractions Hero">
+      <div
+        class="hero-bg"
+        data-bg="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600&q=80"
+      ></div>
+      <div class="hero-overlay"></div>
+      <div class="page-hero-content container">
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a><span>›</span
+          ><span class="current">Attractions</span>
+        </nav>
+        <h1>Attractions &amp; Experiences</h1>
+      </div>
+    </div>
+
+    <section class="section container">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-tag">Insider's Edit</div>
+          <h2 class="section-title">Beyond the Hotel Door</h2>
+          <p class="section-sub">
+            Personally vetted excursions, hidden landmarks, and
+            once-in-a-lifetime experiences — handpicked by our local concierges
+            in every destination we serve.
+          </p>
+        </div>
+      </div>
+
+      <div class="attr-tabs reveal">
+        <button class="attr-tab active" data-category="all">
+          All Experiences
+        </button>
+        <button class="attr-tab" data-category="cultural">
+          Cultural &amp; Historic
+        </button>
+        <button class="attr-tab" data-category="nature">
+          Nature &amp; Outdoors
+        </button>
+        <button class="attr-tab" data-category="culinary">Culinary</button>
+        <button class="attr-tab" data-category="wellness">Wellness</button>
+        <button class="attr-tab" data-category="private">Private Tours</button>
+      </div>
+
+      <div class="grid-3">
+        <article class="attr-card reveal" data-category="cultural private">
+          <div class="attr-card-img">
+            <img
+              src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80"
+              alt="Colosseum private tour"
+            />
+            <span class="attr-card-cat">Cultural</span>
+          </div>
+          <div class="attr-card-body">
+            <div class="attr-card-loc">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 22s-8-7.5-8-13a8 8 0 1 1 16 0c0 5.5-8 13-8 13z"
+                ></path>
+                <circle cx="12" cy="9" r="3"></circle>
+              </svg>
+              Rome, Italy
+            </div>
+            <h3 class="attr-card-title">
+              After-Hours Colosseum &amp; Forum Walk
+            </h3>
+            <p class="attr-card-desc">
+              Skip the crowds entirely. A private archaeologist leads you
+              beneath the arena floor and through the Roman Forum at twilight —
+              the way emperors once saw it.
+            </p>
+            <div class="attr-card-meta">
+              <span class="attr-card-meta-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+                3 hours
+              </span>
+              <span class="attr-card-rating"
+                >★ 4.9
+                <span
+                  style="
+                    color: var(--gray-400);
+                    font-weight: 300;
+                    margin-left: 2px;
+                  "
+                  >(412)</span
+                ></span
+              >
+            </div>
+          </div>
+        </article>
+
+        <article class="attr-card reveal reveal-delay-1" data-category="nature">
+          <div class="attr-card-img">
+            <img
+              src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80"
+              alt="Santorini caldera sail"
+            />
+            <span class="attr-card-cat">Nature</span>
+          </div>
+          <div class="attr-card-body">
+            <div class="attr-card-loc">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 22s-8-7.5-8-13a8 8 0 1 1 16 0c0 5.5-8 13-8 13z"
+                ></path>
+                <circle cx="12" cy="9" r="3"></circle>
+              </svg>
+              Santorini, Greece
+            </div>
+            <h3 class="attr-card-title">
+              Caldera Sunset Sail on a Wooden Schooner
+            </h3>
+            <p class="attr-card-desc">
+              Glide past the volcanic cliffs of Oia aboard a restored 1950s
+              schooner. Anchor at Red Beach, swim the hot springs, and dine on
+              the deck as the sun melts.
+            </p>
+            <div class="attr-card-meta">
+              <span class="attr-card-meta-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+                5 hours
+              </span>
+              <span class="attr-card-rating"
+                >★ 4.95
+                <span
+                  style="
+                    color: var(--gray-400);
+                    font-weight: 300;
+                    margin-left: 2px;
+                  "
+                  >(287)</span
+                ></span
+              >
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="attr-card reveal reveal-delay-2"
+          data-category="culinary cultural private"
+        >
+          <div class="attr-card-img">
+            <img
+              src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=800&q=80"
+              alt="Kyoto tea ceremony"
+            />
+            <span class="attr-card-cat">Culinary</span>
+          </div>
+          <div class="attr-card-body">
+            <div class="attr-card-loc">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 22s-8-7.5-8-13a8 8 0 1 1 16 0c0 5.5-8 13-8 13z"
+                ></path>
+                <circle cx="12" cy="9" r="3"></circle>
+              </svg>
+              Kyoto, Japan
+            </div>
+            <h3 class="attr-card-title">Private Tea Ceremony with a Geiko</h3>
+            <p class="attr-card-desc">
+              In a 200-year-old machiya in Gion, a senior geiko hosts an
+              intimate chanoyu followed by a kaiseki dinner. Conversation, koto
+              music, and rare matcha included.
+            </p>
+            <div class="attr-card-meta">
+              <span class="attr-card-meta-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+                2.5 hours
+              </span>
+              <span class="attr-card-rating"
+                >★ 5.0
+                <span
+                  style="
+                    color: var(--gray-400);
+                    font-weight: 300;
+                    margin-left: 2px;
+                  "
+                  >(96)</span
+                ></span
+              >
+            </div>
+          </div>
+        </article>
+
+        <article class="attr-card reveal" data-category="cultural">
+          <div class="attr-card-img">
+            <img
+              src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=800&q=80"
+              alt="Marrakech souks"
+            />
+            <span class="attr-card-cat">Cultural</span>
+          </div>
+          <div class="attr-card-body">
+            <div class="attr-card-loc">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 22s-8-7.5-8-13a8 8 0 1 1 16 0c0 5.5-8 13-8 13z"
+                ></path>
+                <circle cx="12" cy="9" r="3"></circle>
+              </svg>
+              Marrakech, Morocco
+            </div>
+            <h3 class="attr-card-title">
+              Hidden Riads &amp; Souk Artisans Walk
+            </h3>
+            <p class="attr-card-desc">
+              A novelist-historian threads you through the medina's quietest
+              alleys, into the workshops of master tile-cutters, dyers, and a
+              fourth-generation rug-maker.
+            </p>
+            <div class="attr-card-meta">
+              <span class="attr-card-meta-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+                4 hours
+              </span>
+              <span class="attr-card-rating"
+                >★ 4.88
+                <span
+                  style="
+                    color: var(--gray-400);
+                    font-weight: 300;
+                    margin-left: 2px;
+                  "
+                  >(203)</span
+                ></span
+              >
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="attr-card reveal reveal-delay-1"
+          data-category="nature private"
+        >
+          <div class="attr-card-img">
+            <img
+              src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80"
+              alt="Iceland glacier"
+            />
+            <span class="attr-card-cat">Nature</span>
+          </div>
+          <div class="attr-card-body">
+            <div class="attr-card-loc">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 22s-8-7.5-8-13a8 8 0 1 1 16 0c0 5.5-8 13-8 13z"
+                ></path>
+                <circle cx="12" cy="9" r="3"></circle>
+              </svg>
+              Vatnajökull, Iceland
+            </div>
+            <h3 class="attr-card-title">Ice Cave Helicopter Expedition</h3>
+            <p class="attr-card-desc">
+              Take off from Reykjavík and land on Europe's largest ice cap. A
+              glaciologist guides you into a sapphire-blue ice cave only
+              accessible three weeks each winter.
+            </p>
+            <div class="attr-card-meta">
+              <span class="attr-card-meta-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+                Full day
+              </span>
+              <span class="attr-card-rating"
+                >★ 4.97
+                <span
+                  style="
+                    color: var(--gray-400);
+                    font-weight: 300;
+                    margin-left: 2px;
+                  "
+                  >(58)</span
+                ></span
+              >
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="attr-card reveal reveal-delay-2"
+          data-category="wellness"
+        >
+          <div class="attr-card-img">
+            <img
+              src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80"
+              alt="Bali wellness"
+            />
+            <span class="attr-card-cat">Wellness</span>
+          </div>
+          <div class="attr-card-body">
+            <div class="attr-card-loc">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 22s-8-7.5-8-13a8 8 0 1 1 16 0c0 5.5-8 13-8 13z"
+                ></path>
+                <circle cx="12" cy="9" r="3"></circle>
+              </svg>
+              Ubud, Bali
+            </div>
+            <h3 class="attr-card-title">
+              Sunrise Yoga &amp; Healer's Blessing
+            </h3>
+            <p class="attr-card-desc">
+              Begin in a riverside jungle pavilion at first light, then receive
+              a traditional Balian water blessing at a 1,000-year-old temple
+              known only to villagers.
+            </p>
+            <div class="attr-card-meta">
+              <span class="attr-card-meta-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+                3 hours
+              </span>
+              <span class="attr-card-rating"
+                >★ 4.92
+                <span
+                  style="
+                    color: var(--gray-400);
+                    font-weight: 300;
+                    margin-left: 2px;
+                  "
+                  >(174)</span
+                ></span
+              >
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats-bg-section">
+      <div class="container">
+        <div class="feature-exp">
+          <div class="reveal feature-exp-img">
+            <img
+              src="https://images.unsplash.com/photo-1528127269322-539801943592?w=1000&q=80"
+              alt="Editor's pick"
+            />
+            <span class="feature-exp-img-tag">Editor's Pick</span>
+          </div>
+          <div class="reveal reveal-delay-1 feature-exp-body">
+            <div class="section-tag">Experience of the Month</div>
+            <h2 class="section-title">
+              A Night at the Alhambra, After Closing.
+            </h2>
+
+            <div class="feature-exp-meta">
+              <div>
+                <div class="feature-exp-meta-label">Where</div>
+                <div class="feature-exp-meta-val">Granada</div>
+              </div>
+              <div>
+                <div class="feature-exp-meta-label">Duration</div>
+                <div class="feature-exp-meta-val">4 hrs</div>
+              </div>
+              <div>
+                <div class="feature-exp-meta-label">Group Size</div>
+                <div class="feature-exp-meta-val">Up to 6</div>
+              </div>
+              <div>
+                <div class="feature-exp-meta-label">From</div>
+                <div class="feature-exp-meta-val">$1,240</div>
+              </div>
+            </div>
+
+            <p class="about-body">
+              After the last visitor leaves at sunset, the gates of Spain's
+              most-visited monument close behind you. A private historian, a
+              flamenco guitarist, and a Moorish-cuisine chef accompany you
+              through the Nasrid Palaces and Generalife gardens — by
+              candlelight.
+            </p>
+
+            <div class="feature-exp-quote">
+              “The most extraordinary three hours I've spent on any trip,
+              anywhere. Worth flying to Spain for, alone.”
+              <span class="feature-exp-quote-by"
+                >— Hannah W., Travel + Leisure A-List</span
+              >
+            </div>
+
+            <a href="booking.html" class="btn btn-dark">Reserve Your Evening</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-tag">Browse by Destination</div>
+          <h2 class="section-title">City Guides</h2>
+          <p class="section-sub">
+            Each guide is written by a long-time resident — restaurateur,
+            gallerist, or perfumer — not a travel agency.
+          </p>
+        </div>
+        <a href="hotels.html" class="btn btn-dark">All Destinations</a>
+      </div>
+
+      <div class="guide-row reveal">
+        <a href="#" class="guide-card">
+          <img
+            src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=900&q=80"
+            alt="Paris"
+          />
+          <div class="guide-card-overlay"></div>
+          <div class="guide-card-content">
+            <div class="guide-card-eyebrow">Île-de-France</div>
+            <div class="guide-card-name">Paris</div>
+            <div class="guide-card-meta">
+              42 experiences · curated by Hélène Vidal
+            </div>
+          </div>
+        </a>
+        <a href="#" class="guide-card">
+          <img
+            src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=900&q=80"
+            alt="Tokyo"
+          />
+          <div class="guide-card-overlay"></div>
+          <div class="guide-card-content">
+            <div class="guide-card-eyebrow">Kantō</div>
+            <div class="guide-card-name">Tokyo</div>
+            <div class="guide-card-meta">
+              38 experiences · curated by Ren Kobayashi
+            </div>
+          </div>
+        </a>
+        <a href="#" class="guide-card">
+          <img
+            src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=900&q=80"
+            alt="Venice"
+          />
+          <div class="guide-card-overlay"></div>
+          <div class="guide-card-content">
+            <div class="guide-card-eyebrow">Veneto</div>
+            <div class="guide-card-name">Venice</div>
+            <div class="guide-card-meta">
+              29 experiences · curated by Paolo Riva
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div
+        class="section-header section-header-center reveal"
+        style="display: block; text-align: center"
+      >
+        <div class="section-tag section-tag-center">How It Works</div>
+        <h2 class="section-title">Booked With Your Stay, Effortlessly</h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <span class="step-num">i.</span>
+          <h3>Browse &amp; Shortlist</h3>
+          <p>
+            Filter by destination, theme, or duration. Save favourites to your
+            itinerary as you build the trip.
+          </p>
+        </div>
+        <div class="step-card reveal reveal-delay-1">
+          <span class="step-num">ii.</span>
+          <h3>Concierge Confirms</h3>
+          <p>
+            A human concierge contacts the operator within 24 hours, confirms
+            availability, and tailors the experience to your party.
+          </p>
+        </div>
+        <div class="step-card reveal reveal-delay-2">
+          <span class="step-num">iii.</span>
+          <h3>Show Up &amp; Enjoy</h3>
+          <p>
+            Drivers, guides, and reservations are coordinated end-to-end. You
+            arrive — everything else is already handled.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div
+        class="cta-banner-bg"
+        data-bg="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1400&q=70"
+      ></div>
+      <div class="cta-banner-content container">
+        <div class="section-tag section-tag-center">Bespoke Itineraries</div>
+        <h2 class="section-title cta-title">
+          Looking for Something<br /><em class="gold-em">Truly</em> One-Of-One?
+        </h2>
+        <p class="cta-sub">
+          Tell our concierges what stirs you — they'll design an experience that
+          exists only for you.
+        </p>
+        <a href="contact.html" class="btn btn-primary btn-lg"
+          >Speak to a Concierge</a
+        >
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo-text">LuxeStay</div>
+            <p>
+              Curating the world's finest hospitality experiences since 2018.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="hotels.html">All Hotels</a></li>
+              <li><a href="attractions.html">Attractions</a></li>
+              <li><a href="hotels.html">Luxury Resorts</a></li>
+              <li><a href="hotels.html">Spa Retreats</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help Centre</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 LuxeStay. All rights reserved.</span>
+          <span>Made with ♥ for exceptional travellers</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./scripts/hotels-data.js"></script>
+    <script src="./scripts/attractions.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Hotels - LuxeStay</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav transparent">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+            <path
+              d="M16 4L28 12V28H20V20H12V28H4V12L16 4Z"
+              stroke-width="1.8"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="nav-logo-text">LuxeStay</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="hotels.html" class="nav-link">Hotels</a></li>
+          <li><a href="attractions.html" class="nav-link">Attractions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="favorites.html" class="nav-link">Favorites</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="booking.html" class="nav-link nav-cta">Book Now</a></li>
+        </ul>
+        <button
+          class="nav-burger"
+          id="navBurger"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="page-hero">
+      <div
+        class="hero-bg"
+        data-bg="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1400&q=80"
+      ></div>
+      <div class="hero-overlay"></div>
+      <div class="page-hero-content container">
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a><span>›</span
+          ><span class="current">Hotels</span>
+        </nav>
+        <h1>Find Your Perfect Stay</h1>
+      </div>
+    </div>
+
+    <div class="search-bar-offset container">
+      <div class="search-bar">
+        <div class="search-field">
+          <label for="hotelSearch">Search</label>
+          <input
+            id="hotelSearch"
+            type="text"
+            placeholder="Hotel name or destination…"
+          />
+        </div>
+        <div class="search-field">
+          <label>Check In</label><input type="date" />
+        </div>
+        <div class="search-field">
+          <label>Check Out</label><input type="date" />
+        </div>
+        <div class="search-field">
+          <label for="guestsSelect">Guests</label>
+          <select id="guestsSelect">
+            <option value="0">Any</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4+ Guests</option>
+          </select>
+        </div>
+        <div class="search-btn-wrap">
+          <button class="search-submit">
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.35-4.35" />
+            </svg>
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="section container hotels-section">
+      <div class="hotels-layout">
+        <aside>
+          <div class="filter-panel">
+            <h3>Filters</h3>
+
+            <div class="filter-group">
+              <div class="filter-group-title">Property Type</div>
+              <label class="filter-check"
+                ><input type="checkbox" data-filter-type="resort" /> Resort
+                <span class="count"></span
+              ></label>
+              <label class="filter-check"
+                ><input type="checkbox" data-filter-type="boutique" /> Boutique
+                Hotel <span class="count"></span
+              ></label>
+              <label class="filter-check"
+                ><input type="checkbox" data-filter-type="villa" /> Villa
+                <span class="count"></span
+              ></label>
+              <label class="filter-check"
+                ><input type="checkbox" data-filter-type="retreat" /> Spa
+                Retreat <span class="count"></span
+              ></label>
+              <label class="filter-check"
+                ><input type="checkbox" data-filter-type="eco" /> Eco Lodge
+                <span class="count"></span
+              ></label>
+            </div>
+
+            <div class="filter-group">
+              <div class="filter-group-title">Star Rating</div>
+              <div class="star-btns">
+                <button class="star-btn" data-star="5">★★★★★</button>
+                <button class="star-btn" data-star="4">★★★★</button>
+                <button class="star-btn" data-star="3">★★★</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <div class="filter-group-title">Max Price Per Night</div>
+              <div class="price-range-wrap">
+                <input
+                  type="range"
+                  class="price-range"
+                  id="priceRange"
+                  min="50"
+                  max="1000"
+                  value="1000"
+                  step="10"
+                />
+                <div class="price-labels">
+                  <span>$50</span><span id="priceDisplay">$1000</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <div class="filter-group-title">Amenities</div>
+              <label class="filter-check"
+                ><input type="checkbox" data-filter-amenity="pool" /> Pool
+                <span class="count"></span
+              ></label>
+              <label class="filter-check"
+                ><input type="checkbox" data-filter-amenity="spa" /> Spa
+                <span class="count"></span
+              ></label>
+              <label class="filter-check"
+                ><input type="checkbox" data-filter-amenity="gym" /> Gym
+                <span class="count"></span
+              ></label>
+              <label class="filter-check"
+                ><input type="checkbox" data-filter-amenity="restaurant" />
+                Restaurant <span class="count"></span
+              ></label>
+              <label class="filter-check"
+                ><input type="checkbox" data-filter-amenity="beach" /> Beach
+                Access <span class="count"></span
+              ></label>
+            </div>
+
+            <button class="filter-reset" id="filterReset">
+              Reset All Filters
+            </button>
+          </div>
+        </aside>
+
+        <div>
+          <div class="sort-bar">
+            <p class="sort-bar-count">
+              <strong id="resultCount">0</strong> properties found
+            </p>
+            <div class="sort-bar-right">
+              <label class="sort-label" for="sortSelect">Sort by:</label>
+              <select class="sort-select" id="sortSelect">
+                <option value="rating-desc">Top Rated</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name-asc">Name A-Z</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="hotelsGrid"></div>
+          <div id="paginationWrap" class="pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo-text">LuxeStay</div>
+            <p>
+              Curating the world's finest hospitality experiences since 2018.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="hotels.html">All Hotels</a></li>
+              <li><a href="hotels.html">Luxury Resorts</a></li>
+              <li><a href="hotels.html">Boutique Hotels</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help Centre</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 LuxeStay. All rights reserved.</span
+          ><span>Made with ♥ for exceptional travellers</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./scripts/hotels-data.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/hotels.js"></script>
+  </body>
+</html>

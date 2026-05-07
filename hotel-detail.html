@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Detail - LuxeStay</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav transparent">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+            <path
+              d="M16 4L28 12V28H20V20H12V28H4V12L16 4Z"
+              stroke-width="1.8"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="nav-logo-text">LuxeStay</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="hotels.html" class="nav-link">Hotels</a></li>
+          <li><a href="attractions.html" class="nav-link">Attractions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="favorites.html" class="nav-link">Favorites</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="booking.html" class="nav-link nav-cta">Book Now</a></li>
+        </ul>
+        <button
+          class="nav-burger"
+          id="navBurger"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Detail page root — JS fills all content inside -->
+    <div id="hotelDetailRoot">
+      <!-- TOP BAR -->
+      <div class="detail-topbar">
+        <div class="container">
+          <nav class="breadcrumb breadcrumb-dark">
+            <a href="index.html">Home</a><span>›</span>
+            <a href="hotels.html">Hotels</a><span>›</span>
+            <span id="detailBreadcrumb" class="current">Hotel</span>
+          </nav>
+          <div class="detail-topbar-inner">
+            <div class="detail-topbar-left">
+              <h1 id="detailName"></h1>
+              <div class="detail-meta">
+                <span class="detail-meta-location">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span id="detailLocation"></span>
+                </span>
+                <div class="detail-meta-rating">
+                  <span class="rating-badge" id="detailRating"></span>
+                  <span class="detail-meta-stars" id="detailStars"></span>
+                  <span class="detail-meta-reviews" id="detailReviews"></span>
+                </div>
+                <span class="badge badge-green">✓ Free Cancellation</span>
+              </div>
+            </div>
+            <div class="detail-topbar-right">
+              <div class="detail-price-big" id="detailPrice"></div>
+              <div class="detail-price-sub">per night · taxes included</div>
+              <div class="detail-topbar-actions">
+                <button id="detailFavBtn" class="fav-btn">♡ Save</button>
+                <a
+                  id="bookingCardBtn"
+                  href="booking.html"
+                  class="btn btn-primary"
+                  >Reserve Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALLERY -->
+      <div class="gallery-section container">
+        <div class="gallery-grid">
+          <div class="gallery-main">
+            <img id="galleryMainImg" src="" alt="" />
+          </div>
+          <div class="gallery-thumbs-col" id="galleryThumbs"></div>
+        </div>
+      </div>
+
+      <!-- DETAIL CONTENT -->
+      <section class="section container">
+        <div class="detail-layout">
+          <!-- LEFT -->
+          <div>
+            <div id="highlightRow" class="highlight-row"></div>
+
+            <div class="tabs">
+              <button class="tab-btn active" data-tab="overview">
+                Overview
+              </button>
+              <button class="tab-btn" data-tab="amenities">Amenities</button>
+              <button class="tab-btn" data-tab="rooms">Rooms</button>
+              <button class="tab-btn" data-tab="reviews">Reviews</button>
+              <button class="tab-btn" data-tab="location">Location</button>
+            </div>
+
+            <div class="tab-panel" data-tab-panel="overview">
+              <div id="tabOverviewContent"></div>
+            </div>
+            <div class="tab-panel" data-tab-panel="amenities" hidden>
+              <div class="amenities-tab-grid">
+                <div>
+                  <div class="amenities-tab-sub">Room Amenities</div>
+                  <div id="roomAmenitiesList" class="amenities"></div>
+                </div>
+                <div>
+                  <div class="amenities-tab-sub">Hotel Facilities</div>
+                  <div id="hotelFacilitiesList" class="amenities"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-panel" data-tab-panel="rooms" hidden>
+              <div id="tabRoomsContent" class="rooms-list"></div>
+            </div>
+            <div class="tab-panel" data-tab-panel="reviews" hidden>
+              <div id="tabReviewsContent"></div>
+            </div>
+            <div class="tab-panel" data-tab-panel="location" hidden>
+              <div id="tabLocationContent"></div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Booking card -->
+          <div>
+            <div class="booking-card">
+              <div class="booking-price" id="bookingCardPrice"></div>
+              <div class="booking-price-sub">/ night</div>
+              <div class="booking-meta">
+                <span class="stars" id="bookingCardStars"></span>
+                <strong id="bookingCardRating"></strong>
+                <span id="bookingCardReviews"></span>
+              </div>
+              <hr class="booking-divider" />
+              <div class="form-group">
+                <label>Check In</label>
+                <input type="date" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Check Out</label>
+                <input type="date" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Guests</label>
+                <select class="form-control">
+                  <option>1 Guest</option>
+                  <option selected>2 Guests</option>
+                  <option>3 Guests</option>
+                  <option>4 Guests</option>
+                </select>
+              </div>
+              <a
+                id="bookingCardBtn"
+                href="booking.html"
+                class="btn btn-primary btn-full"
+                >Reserve Now</a
+              >
+              <p class="booking-card-note">
+                Free cancellation · No credit card needed
+              </p>
+              <hr class="booking-divider" />
+              <div class="booking-row">
+                <span>Estimated 3 nights</span><span id="bcEstimate"></span>
+              </div>
+              <div class="booking-row">
+                <span>Service fee</span><span>$25</span>
+              </div>
+              <div class="booking-row total">
+                <span>Est. Total</span><span id="bcTotal"></span>
+              </div>
+            </div>
+            <div class="booking-trust">
+              <div class="booking-trust-item">
+                Secure booking · SSL encrypted
+              </div>
+              <div class="booking-trust-item">Best price guarantee</div>
+              <div class="booking-trust-item">24/7 concierge support</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SIMILAR hotelList -->
+      <section class="similar-section">
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <div class="section-tag">You Might Also Like</div>
+              <h2 class="section-title">Similar Properties</h2>
+            </div>
+            <a href="hotels.html" class="btn btn-dark">View All</a>
+          </div>
+          <div id="similarGrid" class="grid-3"></div>
+        </div>
+      </section>
+    </div>
+    <!-- /#hotelDetailRoot -->
+
+    <!-- GALLERY MODAL -->
+    <div
+      class="modal-overlay"
+      id="galleryModal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Photo gallery"
+    >
+      <div class="modal-box">
+        <button class="modal-close" id="modalClose" aria-label="Close gallery">
+          ✕
+        </button>
+        <div class="modal-main-img">
+          <img id="modalMainImg" src="" alt="" />
+        </div>
+        <div class="modal-nav" aria-hidden="true">
+          <button class="modal-nav-btn" id="modalPrev">‹</button>
+          <button class="modal-nav-btn" id="modalNext">›</button>
+        </div>
+        <div class="modal-thumbs" id="modalThumbs"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo-text">LuxeStay</div>
+            <p>
+              Curating the world's finest hospitality experiences since 2018.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="hotels.html">All Hotels</a></li>
+              <li><a href="hotels.html">Luxury Resorts</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help Centre</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 LuxeStay. All rights reserved.</span
+          ><span>Made with ♥ for exceptional travellers</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./scripts/hotels-data.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/hotel-detail.js"></script>
+  </body>
+</html>
