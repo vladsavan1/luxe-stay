@@ -202,7 +202,7 @@ const hotelList = [
     img: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=800&q=90",
     gallery: [
       "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=1200&q=90",
-      "https://images.unsplash.com/photo-1536625979259-e8d0d612f88d?w=1200&q=90",
+      "https://images.unsplash.com/photo-1742519077728-f40bd20f7d52?w=1200&q=90",
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200&q=90",
     ],
     address: "12 Higashiyama-ku, Kyoto 605-0000, Japan",
@@ -486,10 +486,10 @@ const hotelList = [
     badge: "Eco",
     types: ["eco", "retreat"],
     amenities: ["pool", "spa", "restaurant", "gym"],
-    img: "https://images.unsplash.com/photo-1536625979259-e8d0d612f88d?w=800&q=90",
+    img: "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=90",
     gallery: [
-      "https://images.unsplash.com/photo-1536625979259-e8d0d612f88d?w=1200&q=90",
-      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=1200&q=90",
+      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&q=90",
+      "https://images.unsplash.com/photo-1638356435991-4c79b00ebef3?w=1200&q=90",
     ],
     address: "Jl. Bisma, Ubud, Gianyar, Bali 80571, Indonesia",
     description: [
@@ -503,7 +503,7 @@ const hotelList = [
         bed: "Queen Bed",
         price: 145,
         breakfast: "Breakfast included",
-        img: "https://images.unsplash.com/photo-1536625979259-e8d0d612f88d?w=400&q=80",
+        img: "https://images.unsplash.com/photo-1638356435991-4c79b00ebef3?w=400&q=80",
         badge: "",
       },
       {
@@ -513,7 +513,7 @@ const hotelList = [
         bed: "King + Hammock Deck",
         price: 280,
         breakfast: "Full board",
-        img: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=400&q=80",
+        img: "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=400&q=80",
         badge: "Best Value",
       },
     ],
