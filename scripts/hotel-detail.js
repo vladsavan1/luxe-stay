@@ -29,7 +29,9 @@ document.addEventListener("luxestay:ready", () => {
     if (favBtn) {
       const refresh = () => {
         const isLiked = getFavs().includes(hotel.id);
-        favBtn.textContent = isLiked ? "♥ Saved" : "♡ Save";
+        favBtn.innerHTML = isLiked
+          ? "<img src='./assets/heart-filled.svg' width='20' height='20'> <span>Saved</span>"
+          : "<img src='./assets/heart-outline.svg' width='20' height='20'> <span>Save</span>";
         favBtn.classList.toggle("fav-active", isLiked);
       };
       refresh();
@@ -187,7 +189,6 @@ document.addEventListener("luxestay:ready", () => {
         .filter((h) => h.id !== hotel.id)
         .slice(0, 3)
         .forEach((h) => simGrid.appendChild(buildCard(h)));
-      syncWishBtns();
       observeReveals();
     }
   }
