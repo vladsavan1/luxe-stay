@@ -58,11 +58,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const nav = document.querySelector(".nav");
   const hasHero = document.querySelector(".hero, .page-hero");
+  const logo = document.querySelector(".nav-logo-icon");
   function setNav() {
     if (!hasHero || window.scrollY > 60) {
+      logo.src = "./assets/logo.svg";
       nav.classList.remove("transparent");
       nav.classList.add("scrolled", "dark-links");
     } else {
+      logo.src = "./assets/logo-white.svg";
       nav.classList.add("transparent");
       nav.classList.remove("scrolled", "dark-links");
     }
@@ -129,16 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     saveFavs(favorites);
     return index === -1;
   }
-  function syncWishBtns() {
-    const favorites = getFavs();
-    document.querySelectorAll(".hotel-card-wish").forEach((btn) => {
-      const id = btn.closest("[data-hotel-id]")?.dataset.hotelId;
-      if (!id) return;
-      const isLiked = favorites.includes(id);
-      btn.classList.toggle("active", isLiked);
-      btn.textContent = isLiked ? "♥" : "♡";
-    });
-  }
+
   document.addEventListener(
     "click",
     (e) => {
@@ -150,11 +144,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!card) return;
       const added = toggleFav(card.dataset.hotelId);
       btn.classList.toggle("active", added);
-      btn.textContent = added ? "♥" : "♡";
+      btn.innerHTML = added
+        ? "<img src='./assets/heart-filled.svg'>"
+        : "<img src='./assets/heart-outline.svg'>";
     },
     true,
   );
-  syncWishBtns();
 
   function buildCard(hotel) {
     const isFav = getFavs().includes(hotel.id);
@@ -166,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="hotel-card-img">
           <img src="${hotel.img}" alt="${hotel.name}" loading="lazy">
           ${hotel.badge ? `<span class="hotel-card-badge">${hotel.badge}</span>` : ""}
-          <button class="hotel-card-wish${isFav ? " active" : ""}" aria-label="Save">${isFav ? "♥" : "♡"}</button>
+          <button class="hotel-card-wish${isFav ? " active" : ""}" aria-label="Save">${isFav ? "<img src='./assets/heart-filled.svg' width='20' height='20'>" : "<img src='./assets/heart-outline.svg' width='20' height='20'> "}</button>
         </div>
         <div class="hotel-card-body">
           <div class="hotel-card-location">
@@ -205,7 +200,6 @@ document.addEventListener("DOMContentLoaded", () => {
     observeReveals,
     getFavs,
     toggleFav,
-    syncWishBtns,
     buildCard,
     setText,
   });
