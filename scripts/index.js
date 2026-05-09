@@ -12,6 +12,7 @@ document.addEventListener("luxestay:ready", () => {
       .filter((hotel) => hotel.badge)
       .slice(0, 3)
       .forEach((hotel) => featuredGrid.appendChild(buildCard(hotel)));
+    syncWishBtns();
     observeReveals();
   }
 

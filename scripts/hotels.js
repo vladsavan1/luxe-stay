@@ -76,6 +76,7 @@ document.addEventListener("luxestay:ready", () => {
       return;
     }
     hotels.forEach((hotel) => hotelsGrid.appendChild(buildCard(hotel)));
+    syncWishBtns();
     observeReveals();
   }
 

@@ -10,7 +10,13 @@
     <nav class="nav transparent">
       <div class="nav-inner">
         <a href="index.html" class="nav-logo">
-          <img src="./assets/logo.svg" alt="logo" class="nav-logo-icon" />
+          <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+            <path
+              d="M16 4L28 12V28H20V20H12V28H4V12L16 4Z"
+              stroke-width="1.8"
+              stroke-linejoin="round"
+            />
+          </svg>
           <span class="nav-logo-text">LuxeStay</span>
         </a>
         <ul class="nav-links" id="navLinks">
@@ -98,7 +104,7 @@
       <section class="section container">
         <div class="detail-layout">
           <!-- LEFT -->
-          <div style="max-width: 90vw">
+          <div>
             <div id="highlightRow" class="highlight-row"></div>
 
             <div class="tabs">
@@ -185,6 +191,13 @@
                 <span>Est. Total</span><span id="bcTotal"></span>
               </div>
             </div>
+            <div class="booking-trust">
+              <div class="booking-trust-item">
+                Secure booking · SSL encrypted
+              </div>
+              <div class="booking-trust-item">Best price guarantee</div>
+              <div class="booking-trust-item">24/7 concierge support</div>
+            </div>
           </div>
         </div>
       </section>
@@ -221,34 +234,8 @@
           <img id="modalMainImg" src="" alt="" />
         </div>
         <div class="modal-nav" aria-hidden="true">
-          <button class="modal-nav-btn" id="modalPrev">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polyline points="15 18 9 12 15 6" />
-            </svg>
-          </button>
-          <button class="modal-nav-btn" id="modalNext">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </button>
+          <button class="modal-nav-btn" id="modalPrev">‹</button>
+          <button class="modal-nav-btn" id="modalNext">›</button>
         </div>
         <div class="modal-thumbs" id="modalThumbs"></div>
       </div>
