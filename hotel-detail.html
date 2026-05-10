@@ -33,9 +33,7 @@
       </div>
     </nav>
 
-    <!-- Detail page root — JS fills all content inside -->
     <div id="hotelDetailRoot">
-      <!-- TOP BAR -->
       <div class="detail-topbar">
         <div class="container">
           <nav class="breadcrumb breadcrumb-dark">
@@ -69,7 +67,7 @@
             </div>
             <div class="detail-topbar-right">
               <div class="detail-price-big" id="detailPrice"></div>
-              <div class="detail-price-sub">per night · taxes included</div>
+              <div class=".price-sub">per night · taxes included</div>
               <div class="detail-topbar-actions">
                 <button id="detailFavBtn" class="fav-btn">♡ Save</button>
                 <a
@@ -84,7 +82,6 @@
         </div>
       </div>
 
-      <!-- GALLERY -->
       <div class="gallery-section container">
         <div class="gallery-grid">
           <div class="gallery-main">
@@ -94,10 +91,8 @@
         </div>
       </div>
 
-      <!-- DETAIL CONTENT -->
       <section class="section container">
         <div class="detail-layout">
-          <!-- LEFT -->
           <div style="max-width: 90vw">
             <div id="highlightRow" class="highlight-row"></div>
 
@@ -117,11 +112,11 @@
             <div class="tab-panel" data-tab-panel="amenities" hidden>
               <div class="amenities-tab-grid">
                 <div>
-                  <div class="amenities-tab-sub">Room Amenities</div>
+                  <div class="meta-label">Room Amenities</div>
                   <div id="roomAmenitiesList" class="amenities"></div>
                 </div>
                 <div>
-                  <div class="amenities-tab-sub">Hotel Facilities</div>
+                  <div class="meta-label">Hotel Facilities</div>
                   <div id="hotelFacilitiesList" class="amenities"></div>
                 </div>
               </div>
@@ -137,7 +132,6 @@
             </div>
           </div>
 
-          <!-- RIGHT: Booking card -->
           <div>
             <div class="booking-card">
               <div class="booking-price" id="bookingCardPrice"></div>
@@ -189,12 +183,11 @@
         </div>
       </section>
 
-      <!-- SIMILAR hotelList -->
-      <section class="similar-section">
+      <section class="stats-bg-section">
         <div class="container">
           <div class="section-header reveal">
             <div>
-              <div class="section-tag">You Might Also Like</div>
+              <div class="tag section-tag">You Might Also Like</div>
               <h2 class="section-title">Similar Properties</h2>
             </div>
             <a href="hotels.html" class="btn btn-dark">View All</a>
@@ -203,9 +196,7 @@
         </div>
       </section>
     </div>
-    <!-- /#hotelDetailRoot -->
 
-    <!-- GALLERY MODAL -->
     <div
       class="modal-overlay"
       id="galleryModal"
