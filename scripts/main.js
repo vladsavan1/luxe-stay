@@ -55,12 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (ok) onSuccess();
     });
   }
-
+  const page = location.pathname.split("/").pop();
   const nav = document.querySelector(".nav");
   const hasHero = document.querySelector(".hero, .page-hero");
   const logo = document.querySelector(".nav-logo-icon");
   const assetsPath =
-    page === "" || page === "index.html" ? `./assets` : `../assets`;
+    page === "" || page === "index.html" ? "./assets" : "../assets";
 
   function setNav() {
     if (!hasHero || window.scrollY > 60) {
@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setNav();
   window.addEventListener("scroll", setNav, { passive: true });
 
-  const page = location.pathname.split("/").pop();
   nav
     .querySelectorAll(".nav-link")
     .forEach((l) =>
