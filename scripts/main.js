@@ -59,13 +59,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".nav");
   const hasHero = document.querySelector(".hero, .page-hero");
   const logo = document.querySelector(".nav-logo-icon");
+  const assetsPath =
+    page === "" || page === "index.html" ? `./assets` : `../assets`;
+
   function setNav() {
     if (!hasHero || window.scrollY > 60) {
-      logo.src = "../assets/logo.svg";
+      logo.src = `${assetsPath}/logo.svg`;
       nav.classList.remove("transparent");
       nav.classList.add("scrolled", "dark-links");
     } else {
-      logo.src = "../assets/logo-white.svg";
+      logo.src = `${assetsPath}/logo-white.svg`;
       nav.classList.add("transparent");
       nav.classList.remove("scrolled", "dark-links");
     }
