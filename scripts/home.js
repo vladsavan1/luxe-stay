@@ -2,8 +2,8 @@ document.addEventListener("luxestay:ready", () => {
   document.getElementById("heroSearchBtn")?.addEventListener("click", () => {
     const query = document.getElementById("heroDestination")?.value?.trim();
     location.href = query
-      ? `hotels.html?q=${encodeURIComponent(query)}`
-      : "hotels.html";
+      ? `pages/hotels.html?q=${encodeURIComponent(query)}`
+      : "pages/hotels.html";
   });
 
   const featuredGrid = document.getElementById("featuredGrid");
