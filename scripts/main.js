@@ -61,11 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const logo = document.querySelector(".nav-logo-icon");
   function setNav() {
     if (!hasHero || window.scrollY > 60) {
-      logo.src = "./assets/logo.svg";
+      logo.src = "../assets/logo.svg";
       nav.classList.remove("transparent");
       nav.classList.add("scrolled", "dark-links");
     } else {
-      logo.src = "./assets/logo-white.svg";
+      logo.src = "../assets/logo-white.svg";
       nav.classList.add("transparent");
       nav.classList.remove("scrolled", "dark-links");
     }
@@ -145,8 +145,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const added = toggleFav(card.dataset.hotelId);
       btn.classList.toggle("active", added);
       btn.innerHTML = added
-        ? "<img src='./assets/heart-filled.svg'>"
-        : "<img src='./assets/heart-outline.svg'>";
+        ? "<img src='../assets/heart-filled.svg'>"
+        : "<img src='../assets/heart-outline.svg'>";
     },
     true,
   );
@@ -156,12 +156,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const div = document.createElement("div");
     div.className = "hotel-card reveal";
     div.dataset.hotelId = hotel.id;
+    const linkHref =
+      page === "" || page === "index.html"
+        ? `pages/hotel-detail.html?id=${hotel.id}`
+        : `hotel-detail.html?id=${hotel.id}`;
+
     div.innerHTML = `
-      <a href="hotel-detail.html?id=${hotel.id}" class="hotel-card-link">
+      <a href="${linkHref}" class="hotel-card-link">
         <div class="hotel-card-img">
           <img src="${hotel.img}" alt="${hotel.name}" loading="lazy">
           ${hotel.badge ? `<span class="hotel-card-badge">${hotel.badge}</span>` : ""}
-          <button class="hotel-card-wish${isFav ? " active" : ""}" aria-label="Save">${isFav ? "<img src='./assets/heart-filled.svg' width='20' height='20'>" : "<img src='./assets/heart-outline.svg' width='20' height='20'> "}</button>
+          <button class="hotel-card-wish${isFav ? " active" : ""}" aria-label="Save">${isFav ? "<img src='../assets/heart-filled.svg' width='20' height='20'>" : "<img src='../assets/heart-outline.svg' width='20' height='20'> "}</button>
         </div>
         <div class="hotel-card-body">
           <div class="hotel-card-location">
